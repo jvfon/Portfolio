@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /*text-align: center; */
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%; /* they can get as big as the container they are in */
+    height: auto;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+
+} 
+
+.container {
+    width: 95%; /* for mobile, keeps the text from touching the side of the screen */
+    height: auto;
+}
+
+/* typography  */
+.title {
+    font-size: 2rem; 
+    font-weight: 300;
+    color: #ddd;
+    margin-bottom: 1.5em; 
+    text-transform: uppercase;
+    
+}  
+
+ .title span {
+    font-weight: 500;
+    display: block; /* so it stay on a line  */
+    font-size: .9em;
+    color: #ddd
+} 
+
+@media (min-width: 60rem) { /*  when the screen size reaches 60rem something will happens */
+    .title {
+        font-size: 5rem;
+        
+    }
+} 
+
+/* buttons */
+.button {
+    display: inline-block; /* so padding ads to the height of the button,
+                            otherwise the button and above content overlap */
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: 1em 2em; /* scales in relation to font size */
+    /* background-color: #fff; */
+    color: #fff;  
+    
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-accent {
+    
+    /* border-color: #fff; /* so the border stays that color when you hover */
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    /* background-color: #fff; */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (min-width: 60rem) { /* when the screen size reaches 60rem something will happens */
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+/* header */
+header {
+    position: absolute; /* moves the nav bar on top of the background */
+        /* the down side: the nav doesn't stretch all the way to the right anymore */
+        /* you can fix it with "width: 100%" or left and right: 0 */
+    left: 0; /* centers the nav bar */
+    right: 0;  /* centers the nav bar */
+    margin: 1em;  /* helpful when .nav and .logo float right and left */ 
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase; /* remove the underline */
+    font-size: .8rem;
+    padding: .5em; /* give more space to click */
+    color: #fff;
+}
+
+@media (min-width: 60rem) { /* when the screen size reaches 60rem something will happens */
+     .logo {
+        float: left;
+        width: 10%; /* if your logo is big, this will keep it small */
+    } 
+
+     nav {
+        float: right;
+    }
+} 
+
+/* home hero */ 
+.home-hero {
+    background-image: url(/img/bridge.jpg); 
+    background-size: cover;
+    background-position: top;
+    padding: 10em;
+}
+
+@media (min-width: 60rem) { /* when the screen size reaches 60rem something will happens */
+    .home-hero {
+        height: 100vh; /* viewport height, the background will be the size of the screen */
+        padding-top: 35vh; /* to place the tittle closer to the center */
+    }
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ddd;
+}
